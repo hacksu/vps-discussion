@@ -40,4 +40,12 @@ Password-based Authentication is available, but **is not recommended**.
 
 Once you've selected your server and added your SSH key, we're good to create our VPS!
 
+# SSHing into our VPS
+`ssh root@ip.of.our.server`
 
+# Setting up our Firewall
+```sh
+ufw allow 22 # Allow SSH Connections through the firewall. VERY IMPORTANT
+ufw allow 8080 # We'll use this port to demonstrate how ports work.
+ufw enable # Enable the firewall
+```
