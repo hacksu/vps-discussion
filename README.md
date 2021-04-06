@@ -17,5 +17,7 @@ You can head [here](https://cloud.digitalocean.com/droplets/new?distro=ubuntu-20
 
 **WARNING**: The $40/month tier is selected by default! Don't end up with a $40 bill if you don't want to!
 
-If you've got that $100 free-trial credit, you can do any server you want. If you want to Yolo it (**not recommended**), you can buy a General-Purpose Droplet with **160GB Memory**, **40 Virtual CPUs**, and a **500GB SSD**; __but only for 2 days and 7 hours__. Be sure to turn off that droplet after that or else you'll end up with a **$1200 bill at the end of the month**!!!
-<img src="https://i.imgur.com/rEPIqMu.jpg" height="300px">
+If you've got that $100 free-trial credit, you can do any server you want. 
+
+If you want to YOLO your free-trial credits (**not recommended**), you can buy a General-Purpose Droplet with **160GB Memory**, **40 Virtual CPUs**, and a **500GB SSD**; __but only for 2 days and 7 hours__. Be sure to turn off that droplet after that or else you'll end up with a **$1200 bill at the end of the month**!!!
+<img src="https://i.imgur.com/rEPIqMu.jpg" height="200px">
