@@ -95,3 +95,17 @@ There are many different ones out there, but these are the 2 primary ones:
 
 I'll be showing off NGINX today because its my personal favorite and has similar syntax to JavaScript. You could use Apache if you want, but the configuration I showcase won't correlate directly to Apache.
 
+```bash
+apt install -y nginx
+```
+
+Routing Software does all the work for you; all you have to do is just configure it so it knows what to do. NGINX specializes in "reverse proxies", which is a super cool and simple way to forward a port to be accessible on your server's IP without even needing to put the port in the URL! Perfect for people like me who run almost a dozen different websites on their Virtual Private Server!
+
+```bash
+ufw app list # Show what configurations are available
+ufw allow 'Nginx Full' # Trust NGINX. Any port it needs, it'll have access through the firewall for.
+# You can use 'Nginx HTTP' to do only port 80, or 'Nginx HTTPS' to do only 443
+```
+
+Run `service nginx status` to make sure its up and running!
+
