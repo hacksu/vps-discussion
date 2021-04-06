@@ -44,8 +44,42 @@ Once you've selected your server and added your SSH key, we're good to create ou
 `ssh root@ip.of.our.server`
 
 # Setting up our Firewall
-```sh
+```bash
 ufw allow 22 # Allow SSH Connections through the firewall. VERY IMPORTANT
 ufw allow 8080 # We'll use this port to demonstrate how ports work.
 ufw enable # Enable the firewall
 ```
+
+# Run a simple NodeJS Website
+```bash
+apt install -y nodejs
+```
+
+## Install NPM
+We'll use this a little later, but it takes a moment to install so we're gonna do it in the background and continue with other topics.
+
+```bash
+screen -S npm
+apt install -y npm
+# Press CTRL + A + D to detach the screen session
+```
+Now NPM is installing behind-the-scenes for us!
+
+## Make a simple no-dependency NodeJS Website
+```bash
+mkdir simple-server
+cd simple-server
+nano index.js
+```
+
+```js
+require('http').createServer(function(request, response) {
+  console.log('Someone visited our http server!');
+  response.writeHead(200); // 200 OK HTTP response code. Tells browser "we're all good, everything worked!"
+  response.end('Hi there!'); // Send some content to the browser
+}).listen(8080);
+```
+
+To edit and save a file with NANO, press `Ctrl + X`, then press `Y` so that your changes save.
+
+
