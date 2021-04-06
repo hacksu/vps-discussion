@@ -109,7 +109,7 @@ ufw allow 'Nginx Full' # Trust NGINX. Any port it needs, it'll have access throu
 
 Run `service nginx status` to make sure its up and running!
 
-## Doing some Routing Configuration
+## Serving Static Files
 ```bash
 cd /etc/nginx/sites-enabled
 unlink default
