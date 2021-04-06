@@ -12,6 +12,13 @@ A VPS can do the same things as a normal server can; it's just virtualized and h
 # Signing up for DigitalOcean
 You can use my [Referral Code](https://m.do.co/c/100bab0e5e4e) to get started. You will get a $100 credit that lasts 60 days so you can play around with everything DigitalOcean has to offer! However, be sure to have your credit or debit card ready as you will be required to enter payment info so they can verify you are a real person (don't worry, you won't be charged unless you exceed your available credit).
 
+## Destroying Droplets - VERY IMPORTANT
+From now on, you will get a bill at the end of each month based on what resources you use.
+
+Any and all things you do on DigitalOcean can be turned off and destroyed.
+
+**If you do not intend on continuing use with DigitalOcean**, you __must destroy your resources so you don't get charged for them__.
+
 # Creating a Virtual Private Server
 You can head [here](https://cloud.digitalocean.com/droplets/new?distro=ubuntu-20-04-x64&size=s-1vcpu-1gb) to set up a new Ubuntu droplet, or you can open https://cloud.digitalocean.com, go to the top right, and click `CREATE`, then `Droplet`. My personal recommendation is to use Ubuntu 20.04 and the $5/month tier.
 
@@ -23,3 +30,14 @@ If you want to YOLO your free-trial credits (**not recommended**), you can buy a
 
 
 <img src="https://i.imgur.com/rEPIqMu.jpg" height="200px">
+
+## SSH Key Authentication / Password Authentication
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
+
+SSH Keys will not be covered in-depth here. Follow DigitalOcean's tutorial if you don't already have one set up.
+
+Password-based Authentication is available, but **is not recommended**.
+
+Once you've selected your server and added your SSH key, we're good to create our VPS!
+
+
