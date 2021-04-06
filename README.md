@@ -135,7 +135,7 @@ echo "eeeeeeey! it works!" > /var/www/index.html
 
 Go and visit your server's IP now!
 
-Now that we can serve some files, lets serve something bigger!
+## Now that we can serve some files, lets serve something bigger!
 
 ```bash
 cd /var/www
@@ -163,5 +163,13 @@ server {
 nginx -t
 service nginx reload
 ```
+
+# Domains & DNS
+You can get a domain name for usually less than $20 a year from various different providers. I like [NameCheap](https://www.namecheap.com/) because they're really nicely priced and NameCheap gives you a bunch of other minor benefits that other providers would usually nickle-and-dime you for!
+
+NameCheap, as with any domain provider, provides their own Domain Name System to make the domain function; but you don't have to use the one they provide! I like to use [CloudFlare](https://www.cloudflare.com/) to keep my domains up and running with maximum performance!
+
+I already have a domain name, so I'm going to attach my server's IP to a subdomain there. Since I'm using CloudFlare for me, it'll also handle SSL encryption for me! Now I can visit my server using HTTPS on its domain!
+
 
 
