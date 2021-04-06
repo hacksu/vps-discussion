@@ -82,4 +82,16 @@ require('http').createServer(function(request, response) {
 
 To edit and save a file with NANO, press `Ctrl + X`, then press `Y` so that your changes save.
 
+Once we've done that, we can run it with `node index.js` and then visit `http://your.server.ip.address:8080` and see `Hi there!` pop up!
+
+You can do `Ctrl + C` to stop the server so we can proceed with other topics.
+
+# Install Routing Software
+Now if you may be confused with how ports work, or how networking works, or how you would be able to possibly run multiple websites on a single server, or even just get `8080` out of the URL; well that's what Routing Software is for.
+
+There are many different ones out there, but these are the 2 primary ones:
+- [Apache](https://httpd.apache.org/)
+- [NGINX](https://www.nginx.com/)
+
+I'll be showing off NGINX today because its my personal favorite and has similar syntax to JavaScript. You could use Apache if you want, but the configuration I showcase won't correlate directly to Apache.
 
