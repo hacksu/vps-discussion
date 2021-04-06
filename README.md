@@ -135,4 +135,33 @@ echo "eeeeeeey! it works!" > /var/www/index.html
 
 Go and visit your server's IP now!
 
+Now that we can serve some files, lets serve something bigger!
+
+```bash
+cd /var/www
+git clone https://github.com/hacksu/hacksu-2021.git # Clone Hacksu 2021 Website
+cd hacksu-2021
+npm install && npm run build # Install dependencies, Build static files for the website
+```
+
+Update our configuration so we can serve the Hacksu 2021 website.
+```bash
+nano /etc/nginx/sites-enabled/default
+```
+
+default
+```nginx
+server {
+  listen 80 default_server;
+  root /var/www/hacksu-2021/dist;
+  try_files $uri /index.html; # Fallback to index.html, since Hacksu-2021 is a Single-Page Application
+}
+```
+`Ctrl + X`, `Y`
+
+```bash
+nginx -t
+service nginx reload
+```
+
 
