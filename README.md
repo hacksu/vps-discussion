@@ -89,7 +89,7 @@ You can do `Ctrl + C` to stop the server so we can proceed with other topics.
 # Install Routing Software
 Now if you may be confused with how ports work, or how networking works, or how you would be able to possibly run multiple websites on a single server, or even just get `8080` out of the URL; well that's what Routing Software is for.
 
-There are many different ones out there, but these are the 2 primary ones:
+There are many different ones out there, but these are the 2 majorly popular ones:
 - [Apache](https://httpd.apache.org/)
 - [NGINX](https://www.nginx.com/)
 
@@ -108,4 +108,31 @@ ufw allow 'Nginx Full' # Trust NGINX. Any port it needs, it'll have access throu
 ```
 
 Run `service nginx status` to make sure its up and running!
+
+## Doing some Routing Configuration
+```bash
+cd /etc/nginx/sites-enabled
+unlink default
+nano default
+```
+
+default
+```nginx
+server {
+  listen 80 default_server;
+  root /var/www;
+}
+```
+`Ctrl + X`, `Y` to exit and save.
+
+Run `nginx -t` to test your new configuration and make sure it doesn't have any syntax errors.
+
+`service nginx reload` to update NGINX with your new configuration.
+
+```bash
+echo "eeeeeeey! it works!" > /var/www/index.html
+```
+
+Go and visit your server's IP now!
+
 
