@@ -46,7 +46,7 @@ Once you've selected your server and added your SSH key, we're good to create ou
 # Setting up our Firewall
 ```bash
 ufw allow 22 # Allow SSH Connections through the firewall. VERY IMPORTANT
-ufw allow 8080 # We'll use this port to demonstrate how ports work.
+ufw allow 80 # We'll use this port to demonstrate how ports work.
 ufw enable # Enable the firewall
 ```
 
@@ -73,11 +73,13 @@ nano index.js
 ```
 
 ```js
+let n = 0;
 require('http').createServer(function(request, response) {
-  console.log('Someone visited our http server!');
+  if (request.url == '/favicon.ico') return response.end();
+  console.log('Someone visited our http server! ' + request.url);
   response.writeHead(200); // 200 OK HTTP response code. Tells browser "we're all good, everything worked!"
-  response.end('Hi there!'); // Send some content to the browser
-}).listen(8080);
+  response.end('Hi there! ' + ++n + ' people have already visited this page!'); // Send some content to the browser
+}).listen(80);
 ```
 
 To edit and save a file with NANO, press `Ctrl + X`, then press `Y` so that your changes save.
